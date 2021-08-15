@@ -77,7 +77,6 @@ def insert(request):
     return render(request,"myadmin/info.html",context)
 
 def delete(request,cid=0):
-    '''执行信息删除'''
     try:
         ob = Category.objects.get(id=cid)
         ob.status = 9
